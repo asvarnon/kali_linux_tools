@@ -1,0 +1,122 @@
+Create New user in linux:
+
+#Add User
+useradd -m username
+# -m creates home directory
+
+#Set Pw
+passwd username
+
+#Set user group to Sudo
+usermod -a -G sudo username
+# -a option to add and '-G sudo' means to add the user to sudo group
+
+chsh -s /bin/bash username
+#chsh command is used to change login shell for a user.
+
+---------------------------------------------------------
+Update Kali command:
+sudo apt update && sudo apt upgrade -y
+---------------------------------------------------------
+OpenVas:
+https://127.0.0.1:9392
+
+ausgvmd
+abcd#efgh!
+
+oldpw:
+User created with password '7dcd25ff-7752-48fc-84b3-d45c86319b7f'.
+
+resetPW:
+sudo gvmd --user=admin --new-password=passwd;
+
+gvm start:
+sudo gvm-start
+
+#make new GVM User
+#go to root
+sudo su 
+
+#as gvmd
+su - _gvm -s /bin/bash
+
+#after user & pass = "user pref"
+gvmd --create-user=username --password=password
+
+#logout
+exit
+
+#fix anyhting in checklist
+gvm-check-setup
+
+file sharing :
+sudo usermod -aG vboxsf <your username>
+---------------------------------------------------------
+FIXING Copy/Paste:
+https://www.ceos3c.com/security/kali-linux-2020-1-virtualbox-shared-clipboard-stopped-working-fixed/
+---------------------------------------------------------
+Directory notes:
+create file:
+    touch {fileName}.{fileType}
+cat {fileName} (prints contents in terminal)
+echo {write whatever here} > {fileName}
+NANO:
+	nano {fileName}.{file extension if any} (Opens file in terminal text editor)
+        ex) file3.py
+	ctrl + O (save) then Enter
+	ctrl + X (exit)
+    python3 (runs python file)
+
+ifconfig (network details)
+    IP : WHERE you are.
+    MAC: WHAT you are. (device)
+---------------------------------------------------------
+Linux Notes: 
+    https://www.linuxfoundation.org/blog/blog/classic-sysadmin-the-linux-filesystem-explained
+    tree -L 1 /
+        >show me only the 1st Level of the directory tree starting at / (root)“. The -L option tells tree how many levels down you want to see.
+
+---------------------------------------------------------
+NORDVPN:
+    nordvpn login
+    nordvpn connect
+    nordvpn settings
+    docs: https://support.nordvpn.com/Connectivity/Linux/1325531132/Installing-and-using-NordVPN-on-Debian-Ubuntu-Raspberry-Pi-Elementary-OS-and-Linux-Mint.htm
+
+---------------------------------------------------------
+ping {ip or wbesite} (see if packets are transferring)
+nslookup {website} to get IP
+whois {domain name or IP}
+    in any pentest, you want to write down key info for a report.
+whatweb (plain for help menu)
+whatweb --help (larger help menu)
+whatweb {website} -v
+    home network range bc netmask 255.255.255.0, since 4th is 0, only that one is changeable for home network.the first 3 sections willalways be the same.
+    
+ex: whatweb xxx.xxx.xxx.0-xxx.xxx.xxx.255 --aggression 3 -v --no-errors (--agreesion is attack strength, -v is verbose and readable, --no-errors removes the red errors)
+NOTE: DEFAULT AGGRESSION 1 IS OKAY, OTHERS CAN GET IN TROUBLE WITHOUT PERMISSION
+---------------------------------------------------------
+How to gather Emails:
+tools: theHarvester
+    --help for good amount of functions
+
+Usernames:
+    python3 -m sherlock_project {username username2 etc}
+    (in parent sherlock directory)
+
+OSIN (OPEN SOURCE INTELLIGENCE) tools:
+    https://securitytrails.com/blog/osint-tools
+
+---------------------------------------------------------
+Metasploitable:
+    1) scan range of IPs (since its on my own )
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
