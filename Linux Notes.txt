@@ -110,7 +110,17 @@ OSIN (OPEN SOURCE INTELLIGENCE) tools:
 ---------------------------------------------------------
 Metasploitable:
     1) scan range of IPs (since its on my own )
-    
+        -using ARP for discovering hosts
+            ex) sudo arp --help
+            NOTE: not always good, sometimes have to ping first to add to arp table
+        -netdiscover is better
+            ex) sudo netdiscover
+    2) using NMAP (DURING SCAN, up arrow to see progress) man nmap for manual
+        nmap xxx.xxx.xxx.1 (single IP)
+        nmap xxx.xxx.xxx.1/24 (/24 says only last octet is changeable)
+        sudo -sS nmap xxx.xxx.xxx.xxx only performs first/3 handshakes of TCP. less footprint, never makes full connection (TCP syn scan)
+        -sT nmap xxx.xxx.xxx.xxx performs performs all 3 handshakes (TCP connect scan). leaves alot of traces to show you did scan
+        -sU (UDP scan) slower
 ---------------------------------------------------------
 NOTE:
     for git commit messages: https://stackoverflow.com/questions/13716658/how-to-delete-all-commit-history-in-github
