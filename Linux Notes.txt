@@ -110,8 +110,10 @@ OSIN (OPEN SOURCE INTELLIGENCE) tools:
 ---------------------------------------------------------
 Metasploitable:
     1) scan range of IPs (since its on my own )
+    
 ---------------------------------------------------------
-
+NOTE:
+    for git commit messages: https://stackoverflow.com/questions/13716658/how-to-delete-all-commit-history-in-github
 ---------------------------------------------------------
 
 ---------------------------------------------------------
